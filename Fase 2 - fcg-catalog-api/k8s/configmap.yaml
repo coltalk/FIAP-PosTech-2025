@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tccatalog-api-config
+  labels:
+    app: tccatalog-api
+data:
+  ASPNETCORE_ENVIRONMENT: "Production"
+  ASPNETCORE_URLS: "http://+:5001"
+  Jwt__Issuer: "TcLojaGames"
+  Jwt__Audience: "TcLojaGames"
+  Jwt__ExpirationMinutes: "60"
+  RabbitMq__HostName: "rabbitmq"
+  RabbitMq__Port: "5672"
+  RabbitMq__VirtualHost: "/"
+  RabbitMq__OrderPlacedQueue: "OrderPlaced"
+  RabbitMq__PaymentProcessedQueue: "PaymentProcessed"
