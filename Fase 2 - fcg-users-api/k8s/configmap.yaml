@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tcuser-api-config
+  labels:
+    app: tcuser-api
+data:
+  ASPNETCORE_ENVIRONMENT: "Production"
+  ASPNETCORE_URLS: "http://+:5002"
+  Jwt__Issuer: "TcLojaGames"
+  Jwt__Audience: "TcLojaGames"
+  Jwt__ExpirationMinutes: "60"
+  RabbitMq__HostName: "rabbitmq"
+  RabbitMq__Port: "5672"
+  RabbitMq__VirtualHost: "/"
+  RabbitMq__UserCreatedQueue: "UserCreated"

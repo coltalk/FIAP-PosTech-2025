@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: tcuser-api
+  labels:
+    app: tcuser-api
+spec:
+  selector:
+    app: tcuser-api
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 5002
+  type: LoadBalancer

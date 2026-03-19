@@ -1,0 +1,7 @@
+﻿@TcUser.Api_HostAddress = http://localhost:5166
+
+GET {{TcUser.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+

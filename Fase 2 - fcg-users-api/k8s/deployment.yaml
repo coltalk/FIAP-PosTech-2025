@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tcuser-api
+  labels:
+    app: tcuser-api
+spec:
+  replicas: 2
+  progressDeadlineSeconds: 600
+  selector:
+    matchLabels:
+      app: tcuser-api
+  template:
+    metadata:
+      labels:
+        app: tcuser-api
+    spec:
+      containers:
+        - name: tcuser-api
+          image: tcuser-img:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5002
+              name: http
+          envFrom:
+            - configMapRef:
+                name: tcuser-api-config
+            - secretRef:
+                name: tcuser-api-secret
+          readinessProbe:
+            tcpSocket:
+              port: 5002
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          startupProbe:
+            tcpSocket:
+              port: 5002
+            failureThreshold: 30
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 5002
+            initialDelaySeconds: 60
+            periodSeconds: 15
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
