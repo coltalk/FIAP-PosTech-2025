@@ -5,3 +5,5 @@ metadata:
 data:
   ASPNETCORE_ENVIRONMENT: "Production"
   RabbitMQ__Host: "rabbitmq-service"
+  RabbitMQ__PaymentProcessedExchange: "PaymentProcessed"
+  RabbitMQ__PaymentProcessedQueue: "PaymentProcessed.Notifications"

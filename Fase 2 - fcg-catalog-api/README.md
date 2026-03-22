@@ -88,6 +88,16 @@ Bearer {seu_token}
 
 ### Biblioteca do usuário autenticado
 
+- `POST /api/user/biblioteca`
+- Corpo da requisição:
+
+```json
+{
+  "jogoId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+}
+```
+
+- O `UserId` é obtido do token autenticado.
 - `GET /api/user/biblioteca/me`
 - Retorna itens no formato `BibliotecaJogoDto` (dados do jogo + informações da biblioteca):
   - `status` (int): código do status (`0` EmAberto, `1` Pendente, `2` Aprovado, `3` Reprovado)
@@ -226,4 +236,3 @@ http://localhost:5001/swagger
 - Clovis Ribeiro Ramos - rm369652
 - Matheus Machado Pinheiro do Valle - rm369919
 - Pedro Delgado Henriques -rm369869
-- Jose Mauro Morais Mani -rm

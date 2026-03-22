@@ -67,12 +67,23 @@ public class PaymentProcessedEventConsumer : BackgroundService, IPaymentProcesse
                 _connection = factory.CreateConnection();
                 _channel = _connection.CreateModel();
 
+                _channel.ExchangeDeclare(
+                    exchange: _rabbitMqOptions.PaymentProcessedExchange,
+                    type: ExchangeType.Fanout,
+                    durable: true,
+                    arguments: null);
+
                 _channel.QueueDeclare(
                     queue: _rabbitMqOptions.PaymentProcessedQueue,
                     durable: true,
                     exclusive: false,
                     autoDelete: false,
                     arguments: null);
+
+                _channel.QueueBind(
+                    queue: _rabbitMqOptions.PaymentProcessedQueue,
+                    exchange: _rabbitMqOptions.PaymentProcessedExchange,
+                    routingKey: string.Empty);
 
                 var consumer = new AsyncEventingBasicConsumer(_channel);
                 consumer.Received += async (_, ea) =>
@@ -105,8 +116,9 @@ public class PaymentProcessedEventConsumer : BackgroundService, IPaymentProcesse
                     consumer: consumer);
 
                 _logger.LogInformation(
-                    "Consumidor RabbitMQ iniciado para fila {Queue} (host: {Host}).",
+                    "Consumidor RabbitMQ iniciado para fila {Queue} ligada ao exchange {Exchange} (host: {Host}).",
                     _rabbitMqOptions.PaymentProcessedQueue,
+                    _rabbitMqOptions.PaymentProcessedExchange,
                     _rabbitMqOptions.HostName);
 
                 attempt = 0;

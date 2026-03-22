@@ -230,6 +230,81 @@ Os manifests incluem: `Deployment` (1 replica, limites de CPU/memoria), `Service
 
 ## Como Testar
 
+### Passo a passo completo
+
+Siga os passos abaixo para testar toda a integracao com RabbitMQ do zero:
+
+**Passo 1 — Abrir o Docker Desktop**
+
+Abra o **Docker Desktop** no Windows e aguarde ele iniciar completamente (o icone fica verde na barra de tarefas).
+
+**Passo 2 — Subir os containers**
+
+Abra um terminal na pasta do projeto e execute:
+
+```bash
+docker-compose up --build
+```
+
+Aguarde ate ver nos logs que o MassTransit conectou ao RabbitMQ (mensagem `Bus started` ou `Connected`). Isso pode levar alguns segundos na primeira vez pois o Docker vai baixar as imagens.
+
+**Passo 3 — Testar evento de usuario criado (e-mail de boas-vindas)**
+
+Abra um **segundo terminal** (sem fechar o primeiro) e execute:
+
+```bash
+curl -X POST http://localhost:5003/api/notifications/user-created -H "Content-Type: application/json" -d "{\"userId\":\"550e8400-e29b-41d4-a716-446655440000\",\"name\":\"Pedro\",\"email\":\"pedro@test.com\"}"
+```
+
+Volte no primeiro terminal e procure nos logs:
+```
+[EMAIL SIMULADO] Bem-vindo ao FCG! | Para: pedro@test.com | Nome: Pedro | UserId: 550e8400-...
+```
+
+**Passo 4 — Testar evento de pagamento aprovado**
+
+No segundo terminal, execute:
+
+```bash
+curl -X POST http://localhost:5003/api/notifications/payment-processed -H "Content-Type: application/json" -d "{\"userId\":\"550e8400-e29b-41d4-a716-446655440000\",\"jogoId\":\"660e8400-e29b-41d4-a716-446655440001\",\"payId\":\"770e8400-e29b-41d4-a716-446655440002\",\"status\":2}"
+```
+
+No primeiro terminal, procure nos logs:
+```
+[EMAIL SIMULADO] Pagamento aprovado! | UserId: 550e8400-... | JogoId: 660e8400-... | PayId: 770e8400-...
+```
+
+**Passo 5 — Testar evento de pagamento rejeitado**
+
+No segundo terminal, execute:
+
+```bash
+curl -X POST http://localhost:5003/api/notifications/payment-processed -H "Content-Type: application/json" -d "{\"userId\":\"550e8400-e29b-41d4-a716-446655440000\",\"jogoId\":\"660e8400-e29b-41d4-a716-446655440001\",\"payId\":\"770e8400-e29b-41d4-a716-446655440002\",\"status\":3}"
+```
+
+No primeiro terminal, procure nos logs:
+```
+[EMAIL SIMULADO] Pagamento reprovado. | UserId: 550e8400-... | JogoId: 660e8400-... | PayId: 770e8400-...
+```
+
+**Passo 6 — Verificar o RabbitMQ Management (opcional)**
+
+1. Abra no navegador: http://localhost:15672
+2. Login: `guest` | Senha: `guest`
+3. Clique na aba **Queues** para ver as filas criadas pelo MassTransit
+
+**Passo 7 — Parar os containers**
+
+No terminal do docker-compose, pressione `Ctrl+C` e depois:
+
+```bash
+docker-compose down
+```
+
+> **Dica:** Voce tambem pode testar pelo **Swagger UI** em http://localhost:5003/swagger — basta clicar no endpoint, clicar em **Try it out**, colar o JSON e clicar em **Execute**.
+
+---
+
 ### 1. Testar via Swagger (endpoints HTTP)
 
 1. Acesse o Swagger UI: http://localhost:5003/swagger (Docker) ou http://localhost:5000/swagger (local)

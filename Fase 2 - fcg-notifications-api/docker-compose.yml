@@ -1,22 +1,6 @@
-version: '3.8'
-
 services:
-  rabbitmq:
-    image: rabbitmq:3.13-management
-    container_name: fcg-rabbitmq
-    ports:
-      - "5672:5672"
-      - "15672:15672"
-    environment:
-      RABBITMQ_DEFAULT_USER: guest
-      RABBITMQ_DEFAULT_PASS: guest
-    healthcheck:
-      test: rabbitmq-diagnostics -q ping
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
   notifications-api:
+    image: notifications-img
     build:
       context: .
       dockerfile: Notifications.Api/Dockerfile
@@ -25,9 +9,8 @@ services:
       - "5003:8080"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - RabbitMQ__Host=rabbitmq
+      - RabbitMQ__Host=host.docker.internal
       - RabbitMQ__Username=guest
       - RabbitMQ__Password=guest
-    depends_on:
-      rabbitmq:
-        condition: service_healthy
+      - RabbitMQ__PaymentProcessedExchange=PaymentProcessed
+      - RabbitMQ__PaymentProcessedQueue=PaymentProcessed.Notifications

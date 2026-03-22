@@ -3,6 +3,7 @@ using Notifications.Api.Middlewares;
 using Notifications.Application.Interfaces;
 using Notifications.Application.Services;
 using Notifications.Infra.Consumers;
+using RabbitMQ.Client;
 using Serilog;
 using Serilog.Formatting.Compact;
 
@@ -76,7 +77,27 @@ builder.Services.AddMassTransit(x =>
             h.Password(password);
         });
 
-        cfg.ConfigureEndpoints(context);
+        cfg.ReceiveEndpoint("UserCreated", e =>
+        {
+            e.ClearSerialization();
+            e.UseRawJsonSerializer();
+            e.ConfigureConsumer<UserCreatedConsumer>(context);
+        });
+
+        var paymentProcessedExchange = builder.Configuration["RabbitMQ:PaymentProcessedExchange"] ?? "PaymentProcessed";
+        var paymentProcessedQueue = builder.Configuration["RabbitMQ:PaymentProcessedQueue"] ?? "PaymentProcessed.Notifications";
+
+        cfg.ReceiveEndpoint(paymentProcessedQueue, e =>
+        {
+            e.ConfigureConsumeTopology = false;
+            e.ClearSerialization();
+            e.UseRawJsonSerializer();
+            e.Bind(paymentProcessedExchange, x =>
+            {
+                x.ExchangeType = ExchangeType.Fanout;
+            });
+            e.ConfigureConsumer<PaymentProcessedConsumer>(context);
+        });
     });
 });
 
@@ -94,6 +115,11 @@ app.MapControllers();
 
 // Swagger
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "FCG Notifications API v1");
+});
+
+app.MapGet("/", () => Results.Redirect("/swagger"));
 
 app.Run();

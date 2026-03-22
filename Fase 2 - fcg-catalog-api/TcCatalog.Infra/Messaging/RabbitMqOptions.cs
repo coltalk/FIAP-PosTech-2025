@@ -11,5 +11,6 @@ public sealed class RabbitMqOptions
     public string VirtualHost { get; init; } = null!;
 	
     public string OrderPlacedQueue { get; init; } = null!;
+    public string PaymentProcessedExchange { get; init; } = null!;
     public string PaymentProcessedQueue { get; init; } = null!;
 }

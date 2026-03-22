@@ -21,14 +21,28 @@ public class BibliotecaController : ControllerBase
     }
 
     /// <summary>
-    /// Retorna os jogos aprovados da biblioteca do usuario autenticado.
+    /// Atribui um jogo a biblioteca do usuario autenticado.
+    /// </summary>
+    /// <param name="dto">Identificador do jogo a ser vinculado.</param>
+    /// <param name="ct">Token para cancelamento da requisicao.</param>
+    [HttpPost]
+    public async Task<IActionResult> Atribuir(
+        [FromBody] AtribuirJogoBibliotecaDto dto,
+        CancellationToken ct)
+    {
+        await _service.AddJogoAoUsuarioAsync(_currentUser.UserId!.Value, dto.JogoId, ct);
+        return NoContent();
+    }
+
+    /// <summary>
+    /// Retorna os jogos da biblioteca do usuario autenticado.
     /// </summary>
     /// <param name="ct">Token para cancelamento da requisicao.</param>
     [HttpGet("me")]
-    public async Task<ActionResult<IReadOnlyList<MinhaBibliotecaJogoDto>>> MinhaBiblioteca(
+    public async Task<ActionResult<IReadOnlyList<BibliotecaJogoDto>>> MinhaBiblioteca(
         CancellationToken ct)
     {
-        var jogos = await _service.GetJogosAprovadosDoUsuarioAsync(_currentUser.UserId.Value, ct);
+        var jogos = await _service.GetJogosDoUsuarioAsync(_currentUser.UserId.Value, ct);
         return Ok(jogos);
     }
 }
