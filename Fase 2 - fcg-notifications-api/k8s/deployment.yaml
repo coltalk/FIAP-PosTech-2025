@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
         - name: notifications-api
-          image: notifications-api:latest
+          image: notifications-img:latest
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
           envFrom:
