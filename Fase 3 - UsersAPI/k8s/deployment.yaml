@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: users-api # nome do Deployment
+spec:
+  replicas: 2 # nº Pods quero rodando
+  selector:
+    matchLabels:
+      app: users-api # "gerencia os Pods dssa label"
+  template:
+    metadata:
+      labels:
+        app: users-api #lbl do Pod 
+    spec:
+      containers:
+        - name: users-api
+          image: orchestrationapi-users-api:latest #img local
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          envFrom:  ## variáveis de ambiente
+            - configMapRef:
+                name: users-api-configmap
+            - secretRef:
+                name: users-api-secret
