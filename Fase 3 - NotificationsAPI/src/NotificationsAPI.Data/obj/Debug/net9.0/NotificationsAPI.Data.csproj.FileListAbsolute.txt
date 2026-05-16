@@ -1,0 +1,36 @@
+/src/src/NotificationsAPI.Data/bin/Debug/net9.0/NotificationsAPI.Data.deps.json
+/src/src/NotificationsAPI.Data/bin/Debug/net9.0/NotificationsAPI.Data.runtimeconfig.json
+/src/src/NotificationsAPI.Data/bin/Debug/net9.0/NotificationsAPI.Data.dll
+/src/src/NotificationsAPI.Data/bin/Debug/net9.0/NotificationsAPI.Data.pdb
+/src/src/NotificationsAPI.Data/bin/Debug/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Data/bin/Debug/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.csproj.AssemblyReference.cache
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.GeneratedMSBuildEditorConfig.editorconfig
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.AssemblyInfoInputs.cache
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.AssemblyInfo.cs
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.csproj.CoreCompileInputs.cache
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.sourcelink.json
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/Notifica.0BF27FB0.Up2Date
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.dll
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/refint/NotificationsAPI.Data.dll
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.pdb
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/NotificationsAPI.Data.genruntimeconfig.cache
+/src/src/NotificationsAPI.Data/obj/Debug/net9.0/ref/NotificationsAPI.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\bin\Debug\net9.0\NotificationsAPI.Data.deps.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\bin\Debug\net9.0\NotificationsAPI.Data.runtimeconfig.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\bin\Debug\net9.0\NotificationsAPI.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\bin\Debug\net9.0\NotificationsAPI.Data.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\bin\Debug\net9.0\NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\bin\Debug\net9.0\NotificationsAPI.Domain.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.csproj.AssemblyReference.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.AssemblyInfoInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.AssemblyInfo.cs
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.csproj.CoreCompileInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.sourcelink.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\Notifica.0BF27FB0.Up2Date
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\refint\NotificationsAPI.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\NotificationsAPI.Data.genruntimeconfig.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Data\obj\Debug\net9.0\ref\NotificationsAPI.Data.dll

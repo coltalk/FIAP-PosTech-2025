@@ -1,0 +1,40 @@
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Messaging.deps.json
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Messaging.dll
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Messaging.pdb
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Application.dll
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Data.dll
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Application.pdb
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.Messaging/bin/Debug/net9.0/NotificationsAPI.Data.pdb
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/NotificationsAPI.Messaging.csproj.AssemblyReference.cache
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/NotificationsAPI.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/NotificationsAPI.Messaging.AssemblyInfoInputs.cache
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/NotificationsAPI.Messaging.AssemblyInfo.cs
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/NotificationsAPI.Messaging.csproj.CoreCompileInputs.cache
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/NotificationsAPI.Messaging.sourcelink.json
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/Notifica.D30B8818.Up2Date
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/NotificationsAPI.Messaging.dll
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/refint/NotificationsAPI.Messaging.dll
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/NotificationsAPI.Messaging.pdb
+/src/src/NotificationsAPI.Messaging/obj/Debug/net9.0/ref/NotificationsAPI.Messaging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Messaging.deps.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Messaging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Messaging.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Application.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Application.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Domain.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\bin\Debug\net9.0\NotificationsAPI.Data.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\NotificationsAPI.Messaging.csproj.AssemblyReference.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\NotificationsAPI.Messaging.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\NotificationsAPI.Messaging.AssemblyInfoInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\NotificationsAPI.Messaging.AssemblyInfo.cs
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\NotificationsAPI.Messaging.csproj.CoreCompileInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\NotificationsAPI.Messaging.sourcelink.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\Notifica.D30B8818.Up2Date
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\NotificationsAPI.Messaging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\refint\NotificationsAPI.Messaging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\NotificationsAPI.Messaging.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Messaging\obj\Debug\net9.0\ref\NotificationsAPI.Messaging.dll

@@ -1,0 +1,44 @@
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.IoC.deps.json
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.IoC.dll
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.IoC.pdb
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.Application.dll
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.Data.dll
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.Messaging.dll
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.Application.pdb
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.Data.pdb
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.IoC/bin/Debug/net9.0/NotificationsAPI.Messaging.pdb
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/NotificationsAPI.IoC.csproj.AssemblyReference.cache
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/NotificationsAPI.IoC.GeneratedMSBuildEditorConfig.editorconfig
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/NotificationsAPI.IoC.AssemblyInfoInputs.cache
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/NotificationsAPI.IoC.AssemblyInfo.cs
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/NotificationsAPI.IoC.csproj.CoreCompileInputs.cache
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/NotificationsAPI.IoC.sourcelink.json
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/Notifica.EDDA8854.Up2Date
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/NotificationsAPI.IoC.dll
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/refint/NotificationsAPI.IoC.dll
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/NotificationsAPI.IoC.pdb
+/src/src/NotificationsAPI.IoC/obj/Debug/net9.0/ref/NotificationsAPI.IoC.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.IoC.deps.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.IoC.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.IoC.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.Application.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.Messaging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.Application.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.Data.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.Domain.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\bin\Debug\net9.0\NotificationsAPI.Messaging.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\NotificationsAPI.IoC.csproj.AssemblyReference.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\NotificationsAPI.IoC.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\NotificationsAPI.IoC.AssemblyInfoInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\NotificationsAPI.IoC.AssemblyInfo.cs
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\NotificationsAPI.IoC.csproj.CoreCompileInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\NotificationsAPI.IoC.sourcelink.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\Notifica.EDDA8854.Up2Date
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\NotificationsAPI.IoC.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\refint\NotificationsAPI.IoC.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\NotificationsAPI.IoC.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.IoC\obj\Debug\net9.0\ref\NotificationsAPI.IoC.dll

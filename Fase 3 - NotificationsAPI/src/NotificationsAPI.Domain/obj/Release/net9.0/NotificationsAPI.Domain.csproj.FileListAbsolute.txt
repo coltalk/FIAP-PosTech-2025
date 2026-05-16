@@ -1,0 +1,13 @@
+/src/src/NotificationsAPI.Domain/bin/Release/net9.0/NotificationsAPI.Domain.deps.json
+/src/src/NotificationsAPI.Domain/bin/Release/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Domain/bin/Release/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/NotificationsAPI.Domain.csproj.AssemblyReference.cache
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/NotificationsAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/NotificationsAPI.Domain.AssemblyInfoInputs.cache
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/NotificationsAPI.Domain.AssemblyInfo.cs
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/NotificationsAPI.Domain.csproj.CoreCompileInputs.cache
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/NotificationsAPI.Domain.sourcelink.json
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/refint/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.Domain/obj/Release/net9.0/ref/NotificationsAPI.Domain.dll

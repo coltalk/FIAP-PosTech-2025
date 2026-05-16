@@ -1,0 +1,11 @@
+/src/artifacts/lambda/publish/NotificationsAPI.Function.pdb
+/src/artifacts/lambda/publish/appsettings.json
+/src/artifacts/lambda/publish/libicudata.so.72.1.0.3
+/src/artifacts/lambda/publish/libicui18n.so.72.1.0.3
+/src/artifacts/lambda/publish/libicuuc.so.72.1.0.3
+/src/artifacts/lambda/publish/NotificationsAPI.Application.pdb
+/src/artifacts/lambda/publish/NotificationsAPI.IoC.pdb
+/src/artifacts/lambda/publish/NotificationsAPI.Data.pdb
+/src/artifacts/lambda/publish/NotificationsAPI.Domain.pdb
+/src/artifacts/lambda/publish/NotificationsAPI.Messaging.pdb
+/src/artifacts/lambda/publish/NotificationsAPI.Function

@@ -1,0 +1,36 @@
+/src/src/NotificationsAPI.Application/bin/Debug/net9.0/NotificationsAPI.Application.deps.json
+/src/src/NotificationsAPI.Application/bin/Debug/net9.0/NotificationsAPI.Application.dll
+/src/src/NotificationsAPI.Application/bin/Debug/net9.0/NotificationsAPI.Application.pdb
+/src/src/NotificationsAPI.Application/bin/Debug/net9.0/NotificationsAPI.Data.dll
+/src/src/NotificationsAPI.Application/bin/Debug/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Application/bin/Debug/net9.0/NotificationsAPI.Data.pdb
+/src/src/NotificationsAPI.Application/bin/Debug/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/NotificationsAPI.Application.csproj.AssemblyReference.cache
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/NotificationsAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/NotificationsAPI.Application.AssemblyInfoInputs.cache
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/NotificationsAPI.Application.AssemblyInfo.cs
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/NotificationsAPI.Application.csproj.CoreCompileInputs.cache
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/NotificationsAPI.Application.sourcelink.json
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/Notifica.ABBDEC2C.Up2Date
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/NotificationsAPI.Application.dll
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/refint/NotificationsAPI.Application.dll
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/NotificationsAPI.Application.pdb
+/src/src/NotificationsAPI.Application/obj/Debug/net9.0/ref/NotificationsAPI.Application.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\bin\Debug\net9.0\NotificationsAPI.Application.deps.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\bin\Debug\net9.0\NotificationsAPI.Application.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\bin\Debug\net9.0\NotificationsAPI.Application.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\bin\Debug\net9.0\NotificationsAPI.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\bin\Debug\net9.0\NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\bin\Debug\net9.0\NotificationsAPI.Data.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\bin\Debug\net9.0\NotificationsAPI.Domain.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\NotificationsAPI.Application.csproj.AssemblyReference.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\NotificationsAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\NotificationsAPI.Application.AssemblyInfoInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\NotificationsAPI.Application.AssemblyInfo.cs
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\NotificationsAPI.Application.csproj.CoreCompileInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\NotificationsAPI.Application.sourcelink.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\Notifica.ABBDEC2C.Up2Date
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\NotificationsAPI.Application.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\refint\NotificationsAPI.Application.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\NotificationsAPI.Application.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Application\obj\Debug\net9.0\ref\NotificationsAPI.Application.dll

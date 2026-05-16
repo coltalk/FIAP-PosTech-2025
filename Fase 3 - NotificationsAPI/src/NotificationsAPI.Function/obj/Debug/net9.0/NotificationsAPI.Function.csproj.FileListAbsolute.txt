@@ -1,0 +1,292 @@
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/appsettings.json
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Function
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Function.deps.json
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Function.runtimeconfig.json
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Function.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Function.pdb
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Amazon.Lambda.Core.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Amazon.Lambda.RuntimeSupport.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Amazon.Lambda.Serialization.SystemTextJson.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Azure.Core.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Azure.Identity.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Castle.Core.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/DnsClient.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/FluentValidation.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/FluentValidation.DependencyInjectionExtensions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/MassTransit.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/MassTransit.Abstractions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/MassTransit.RabbitMqTransport.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Data.SqlClient.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Proxies.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Configuration.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Binder.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Configuration.FileExtensions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Json.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Abstractions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.FileProviders.Physical.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.FileSystemGlobbing.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Identity.Core.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Identity.Stores.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Logging.Configuration.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Logging.Console.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Identity.Client.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Identity.Client.Extensions.Msal.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.SqlServer.Server.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Microsoft.Win32.SystemEvents.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/MongoDB.Bson.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/MongoDB.Driver.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/RabbitMQ.Client.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.AspNetCore.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Enrichers.Environment.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Enrichers.Process.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Enrichers.Thread.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Extensions.Logging.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Formatting.Compact.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Settings.Configuration.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Sinks.Console.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Sinks.File.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Sinks.MongoDB.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Serilog.Sinks.PeriodicBatching.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/SharpCompress.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Snappier.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/SnapshotRestore.Registry.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.ClientModel.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.Drawing.Common.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.Memory.Data.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.Runtime.Caching.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.Security.Permissions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/System.Windows.Extensions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/ZstdSharp.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/linux-arm64/native/libicudata.so.72.1.0.3
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/linux-arm64/native/libicui18n.so.72.1.0.3
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/linux-arm64/native/libicuuc.so.72.1.0.3
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/linux-x64/native/libicudata.so.72.1.0.3
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/linux-x64/native/libicui18n.so.72.1.0.3
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/linux-x64/native/libicuuc.so.72.1.0.3
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-arm64/native/icudt72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-arm64/native/icuin72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-arm64/native/icuuc72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-x64/native/icudt72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-x64/native/icuin72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-x64/native/icuuc72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-x86/native/icudt72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-x86/native/icuin72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win-x86/native/icuuc72.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Application.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Data.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.IoC.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Messaging.dll
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Application.pdb
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.IoC.pdb
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Data.pdb
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.Function/bin/Debug/net9.0/NotificationsAPI.Messaging.pdb
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.csproj.AssemblyReference.cache
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.GeneratedMSBuildEditorConfig.editorconfig
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.AssemblyInfoInputs.cache
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.AssemblyInfo.cs
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.csproj.CoreCompileInputs.cache
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.sourcelink.json
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/Notifica.49530254.Up2Date
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.dll
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/refint/NotificationsAPI.Function.dll
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.pdb
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/NotificationsAPI.Function.genruntimeconfig.cache
+/src/src/NotificationsAPI.Function/obj/Debug/net9.0/ref/NotificationsAPI.Function.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\appsettings.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Function.exe
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Function.deps.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Function.runtimeconfig.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Function.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Function.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Amazon.Lambda.Core.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Amazon.Lambda.RuntimeSupport.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Amazon.Lambda.Serialization.SystemTextJson.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Azure.Core.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Azure.Identity.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Castle.Core.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\DnsClient.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\FluentValidation.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\MassTransit.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\MassTransit.Abstractions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\MassTransit.RabbitMqTransport.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Data.SqlClient.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Logging.Configuration.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Logging.Console.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Identity.Client.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.OpenApi.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.SqlServer.Server.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\MongoDB.Bson.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\MongoDB.Driver.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\RabbitMQ.Client.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.AspNetCore.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Enrichers.Environment.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Enrichers.Process.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Enrichers.Thread.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Sinks.File.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Sinks.MongoDB.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Serilog.Sinks.PeriodicBatching.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\SharpCompress.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Snappier.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\SnapshotRestore.Registry.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.ClientModel.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.Drawing.Common.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.Memory.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.Runtime.Caching.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.Security.Permissions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\System.Windows.Extensions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\ZstdSharp.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\linux-arm64\native\libicudata.so.72.1.0.3
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\linux-arm64\native\libicui18n.so.72.1.0.3
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\linux-arm64\native\libicuuc.so.72.1.0.3
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\linux-x64\native\libicudata.so.72.1.0.3
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\linux-x64\native\libicui18n.so.72.1.0.3
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\linux-x64\native\libicuuc.so.72.1.0.3
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-arm64\native\icudt72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-arm64\native\icuin72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-arm64\native\icuuc72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-x64\native\icudt72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-x64\native\icuin72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-x64\native\icuuc72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-x86\native\icudt72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-x86\native\icuin72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win-x86\native\icuuc72.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Application.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Data.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.IoC.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Messaging.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Application.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.IoC.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Data.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Domain.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\bin\Debug\net9.0\NotificationsAPI.Messaging.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.csproj.AssemblyReference.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.AssemblyInfoInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.AssemblyInfo.cs
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.csproj.CoreCompileInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.sourcelink.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\Notifica.49530254.Up2Date
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\refint\NotificationsAPI.Function.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\NotificationsAPI.Function.genruntimeconfig.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Function\obj\Debug\net9.0\ref\NotificationsAPI.Function.dll

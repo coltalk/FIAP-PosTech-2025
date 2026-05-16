@@ -1,0 +1,26 @@
+/src/src/NotificationsAPI.Domain/bin/Debug/net9.0/NotificationsAPI.Domain.deps.json
+/src/src/NotificationsAPI.Domain/bin/Debug/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Domain/bin/Debug/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/NotificationsAPI.Domain.csproj.AssemblyReference.cache
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/NotificationsAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/NotificationsAPI.Domain.AssemblyInfoInputs.cache
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/NotificationsAPI.Domain.AssemblyInfo.cs
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/NotificationsAPI.Domain.csproj.CoreCompileInputs.cache
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/NotificationsAPI.Domain.sourcelink.json
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/refint/NotificationsAPI.Domain.dll
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/NotificationsAPI.Domain.pdb
+/src/src/NotificationsAPI.Domain/obj/Debug/net9.0/ref/NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\bin\Debug\net9.0\NotificationsAPI.Domain.deps.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\bin\Debug\net9.0\NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\bin\Debug\net9.0\NotificationsAPI.Domain.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\NotificationsAPI.Domain.csproj.AssemblyReference.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\NotificationsAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\NotificationsAPI.Domain.AssemblyInfoInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\NotificationsAPI.Domain.AssemblyInfo.cs
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\NotificationsAPI.Domain.csproj.CoreCompileInputs.cache
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\NotificationsAPI.Domain.sourcelink.json
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\refint\NotificationsAPI.Domain.dll
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\NotificationsAPI.Domain.pdb
+D:\GitHub\Fiap 3\NotificationsAPI - Meu\src\NotificationsAPI.Domain\obj\Debug\net9.0\ref\NotificationsAPI.Domain.dll
