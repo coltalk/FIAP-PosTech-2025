@@ -209,6 +209,113 @@ kubectl delete -f k8s/
 
 ---
 
+## 🔴 Cache com Redis
+
+### O que foi implementado
+
+Adicionamos cache distribuído com **Redis** no microsserviço UsersAPI para reduzir consultas ao banco de dados SQL Server em leituras repetidas de usuários.
+
+**Arquivos criados/alterados:**
+
+| Arquivo | O que faz |
+|---|---|
+| `UsersAPI.Application/Interfaces/ICacheService.cs` | Interface com os métodos `GetAsync`, `SetAsync` e `RemoveAsync` |
+| `UsersAPI.Application/Services/RedisCacheService.cs` | Implementação usando `IDistributedCache` do .NET com serialização JSON |
+| `UsersAPI.IoC/RedisServiceCollectionExtensions.cs` | Registra o Redis e o `RedisCacheService` no container de injeção de dependência |
+| `UsersAPI.Application/AppServices/UsuarioAppService.cs` | Consome o `ICacheService` nos métodos `BuscarPorId`, `AlterarSenha` e `AlterarStatus` |
+| `appsettings.Development.json` | Adicionada connection string do Redis (`localhost:6379`) e nível de log `Debug` para o namespace `UsersAPI.Application.AppServices` (necessário para visualizar os logs de cache no terminal) |
+| `docker-compose.yml` | Container Redis já configurado (`redis:7-alpine`, porta `6379`) |
+
+---
+
+### Como funciona
+
+| Operação | Comportamento |
+|---|---|
+| `GET BuscarPorId` (1ª vez) | Busca no banco SQL Server, grava no Redis com TTL de 10 minutos |
+| `GET BuscarPorId` (2ª vez em diante) | Retorna direto do Redis, sem consultar o banco |
+| `PUT AlterarSenha` | Remove o cache do usuário automaticamente |
+| `PUT AlterarStatus` | Remove o cache do usuário automaticamente |
+
+**Chave no Redis:** `UsersAPI:usuario:{guid-do-usuario}`
+
+---
+
+### Passo a passo para testar
+
+**Pré-requisitos:** Docker e .NET 9 instalados.
+
+#### 1. Subir o ambiente
+
+```bash
+docker compose up -d
+dotnet run --project "src/UsersAPI.Api/UsersAPI.Api.csproj"
+```
+
+Acesse o Swagger em `http://localhost:5001/swagger`.
+
+#### 2. Fazer login
+
+Execute `POST /api/Authentication/login`:
+
+```json
+{
+  "usuario": "seu_usuario",
+  "senha": "sua_senha"
+}
+```
+
+Na resposta, copie o valor do campo `"token"` diretamente do **Response body**. Clique em **Authorize** no Swagger e cole o token sem o prefixo "Bearer".
+
+#### 3. Primeira busca — popula o cache
+
+Execute `GET /api/Usuarios/BuscarPorId/{id}`.
+
+**Log esperado no terminal:**
+```
+[DBG] Cache populado | UsuarioId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+A API foi ao banco SQL Server e gravou o resultado no Redis.
+
+#### 4. Segunda busca — cache hit
+
+Execute o mesmo `GET` novamente.
+
+**Log esperado no terminal:**
+```
+[DBG] Cache hit | UsuarioId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+A API **não consultou o banco** — retornou direto do Redis.
+
+#### 5. Verificar a chave no Redis
+
+```bash
+docker exec redis-fiap-cloud-games redis-cli KEYS "UsersAPI:*"
+```
+
+#### 6. Invalidar o cache
+
+Execute `PUT /api/Usuarios/AlterarStatus?id={id}`. O cache do usuário é removido automaticamente.
+
+#### 7. GET após invalidação
+
+Execute o `GET` novamente. O log mostrará `Cache populado` — a API voltou ao banco pois o cache foi removido.
+
+---
+
+### Resultados comprovados em teste real (15/05/2026)
+
+| Etapa | Operação | Log no terminal | Tempo |
+|---|---|---|---|
+| 1 | `GET BuscarPorId` — 1ª chamada | `[DBG] Cache populado` | 216ms |
+| 2 | `GET BuscarPorId` — 2ª chamada | `[DBG] Cache hit` | 15ms |
+| 3 | `PUT AlterarStatus` | cache removido do Redis | 46ms |
+| 4 | `GET BuscarPorId` — após invalidação | `[DBG] Cache populado` | 16ms |
+
+**Ganho de performance comprovado: 14x mais rápido com cache ativo (216ms → 15ms).**
+
+---
+
 ## 🎓 Contexto Acadêmico
 
 Desenvolvido para o **Tech Challenge Fase 2 — PosTech FIAP**

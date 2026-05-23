@@ -1,0 +1,39 @@
+[33mcommit 30472b65d5d0032bb381860f3aedae180e2e9e9a[m
+Author: Marcio Torquato <marcio.limat@gmail.com>
+Date:   Thu May 21 00:07:53 2026 -0300
+
+    feat: fase 3 - serverless, observabilidade, persistencia poliglota e Redis
+    
+    docker-compose.yml:
+    - Adicionado servico Redis (redis:7-alpine, porta 6379) para cache distribuido
+    - UsersAPI: adicionado depends_on redis e ConnectionStrings__Redis
+    - CatalogAPI: adicionadas variaveis MongoDB__ConnectionString e MongoDB__DatabaseName
+    - Removido container notifications-api (migrado para AWS Lambda via LocalStack)
+    - Adicionado servico LocalStack 3.8.1 (Lambda, S3, IAM, CloudWatch, porta 4566)
+    - Adicionado servico Prometheus (prom/prometheus, porta 9090)
+    - Adicionado servico Grafana (grafana/grafana, porta 3000)
+    - Adicionado volume localstack-data
+    
+    observability/ (novo diretorio):
+    - prometheus/prometheus.yml: scrape jobs para users-api e catalog-api em /metrics
+    - grafana/datasources/datasource.yaml: datasource apontando para Prometheus
+    - grafana/dashboards/provider.yaml: provider de dashboards
+    - grafana/dashboards/orchestration-api.json: dashboard com 6 paineis (request rate, 5xx, P50/P95/P99, status code)
+    
+    README.md:
+    - Adicionada secao Fase 3 cobrindo os 4 requisitos do Tech Challenge
+    - Arquitetura atualizada: NotificationsAPI como Lambda, Redis e LocalStack incluidos
+    - Adicionado Painel de Acesso Rapido com enderecos, usuarios e senhas de todas as ferramentas
+    - Documentado script start-ecosystem.ps1 como metodo principal de inicializacao
+    - Passo a passo manual completo com limpeza (docker prune e kubectl delete), clone, compose, deploy Lambda e trigger
+    - Documentada Opcao A de observabilidade: Prometheus + Grafana
+    - Documentada persistencia poliglota: Redis (UsersAPI) e MongoDB.Driver (CatalogAPI/GameRatings)
+    - Documentada arquitetura serverless: Lambda, Terraform IaC e bridge RabbitMQ
+
+ README.md                                          | 731 [32m+++++++++++++++[m[31m------[m
+ docker-compose.yml                                 |  72 [32m+[m[31m-[m
+ .../grafana/dashboards/orchestration-api.json      | 175 [32m+++++[m
+ observability/grafana/dashboards/provider.yaml     |   7 [32m+[m
+ observability/grafana/datasources/datasource.yaml  |   8 [32m+[m
+ observability/prometheus/prometheus.yml            |  14 [32m+[m
+ 6 files changed, 791 insertions(+), 216 deletions(-)

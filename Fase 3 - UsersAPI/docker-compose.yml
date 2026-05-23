@@ -11,6 +11,35 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
 
+  redis:
+    image: redis:7-alpine
+    container_name: redis-fiap-cloud-games
+    restart: always
+    ports:
+      - "6379:6379"
+    command: redis-server --save 60 1 --loglevel warning
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver-fiap-cloud-games
+    restart: always
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Fiap@1234"
+      ACCEPT_EULA: "Y"
+
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-fiap-cloud-games
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
+
   mongo-express:
     image: mongo-express:1.0.0
     container_name: mongo-express

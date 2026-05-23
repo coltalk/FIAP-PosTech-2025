@@ -12,11 +12,11 @@ public static class UsuariosEndpoints
     {
         var app = route.MapGroup("/api/Usuarios").WithTags("Usuarios");
 
-        app.MapGet("BuscarPorId/{id}", (Guid id, IUsuarioAppService usuarioService) =>
+        app.MapGet("BuscarPorId/{id}", async (Guid id, IUsuarioAppService usuarioService) =>
         {
             try
             {
-                var result = usuarioService.BuscarPorId(id);
+                var result = await usuarioService.BuscarPorId(id);
                 return ApiResponses.Ok(result, "Usuário encontrado com sucesso.");
             }
             catch (KeyNotFoundException)

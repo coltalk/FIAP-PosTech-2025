@@ -13,15 +13,20 @@ public class UsuarioAppService : IUsuarioAppService
 {
     private readonly IUsuarioService _usuarioService;
     private readonly IEventPublisher _eventPublisher;
+    private readonly ICacheService _cache;
     private readonly ILogger<UsuarioAppService> _logger;
+
+    private static string CacheKey(Guid id) => $"usuario:{id}";
 
     public UsuarioAppService(
     IUsuarioService usuarioService,
     IEventPublisher eventPublisher,
+    ICacheService cache,
     ILogger<UsuarioAppService> logger)
     {
         _usuarioService = usuarioService;
         _eventPublisher = eventPublisher;
+        _cache = cache;
         _logger = logger;
     }
 
@@ -59,14 +64,22 @@ public class UsuarioAppService : IUsuarioAppService
         };
     }
 
-    public BuscarPorIdResponse BuscarPorId(Guid id)
+    public async Task<BuscarPorIdResponse> BuscarPorId(Guid id)
     {
+        var cached = await _cache.GetAsync<BuscarPorIdResponse>(CacheKey(id));
+        if (cached is not null)
+        {
+            _logger.LogDebug("Cache hit | UsuarioId: {UsuarioId}", id);
+            return cached;
+        }
+
         var usuario = _usuarioService.GetById(id);
         if (usuario is null)
         {
             _logger.LogWarning("Usuário não encontrado | UsuarioId: {UsuarioId}", id);
             throw new NotFoundException("Usuário não encontrado.");
         }
+
         var result = new BuscarPorIdResponse
         {
             Id = usuario.Id,
@@ -90,6 +103,10 @@ public class UsuarioAppService : IUsuarioAppService
                 Description = ur.Role?.Description,
             }).ToList() ?? []
         };
+
+        await _cache.SetAsync(CacheKey(id), result);
+        _logger.LogDebug("Cache populado | UsuarioId: {UsuarioId}", id);
+
         return result;
     }
 
@@ -100,6 +117,10 @@ public class UsuarioAppService : IUsuarioAppService
         {
             _logger.LogWarning("Falha ao alterar senha: Usuário não encontrado ou senha atual incorreta | UsuarioId: {UsuarioId}", request.Id);
         }
+
+        if (sucesso)
+            await _cache.RemoveAsync(CacheKey(request.Id));
+
         return sucesso;
     }
 
@@ -110,6 +131,10 @@ public class UsuarioAppService : IUsuarioAppService
         {
             _logger.LogWarning("Falha ao alterar status: Usuário não encontrado | UsuarioId: {UsuarioId}", id);
         }
+
+        if (result is not null)
+            await _cache.RemoveAsync(CacheKey(id));
+
         return result;
     }
 }

@@ -12,11 +12,24 @@
 #   consumers: identidades — quem está autorizado a usar o gateway
 #
 # ─────────────────────────────────────────────────────────────
+# ROTAS CONFIGURADAS
+# ─────────────────────────────────────────────────────────────
+#
+#   users-login-route    → /users/api/Authentication  — PÚBLICA (sem JWT)
+#   users-cadastro-route → /users/api/Usuarios/Cadastrar — PÚBLICA (sem JWT)
+#   users-api-route      → /users                     — PROTEGIDA (com JWT)
+#   catalog-api-route    → /catalog                   — PROTEGIDA (com JWT)
+#
+#   IMPORTANTE: A ordem das rotas importa!
+#   Rotas mais específicas (/users/api/Authentication) devem vir
+#   ANTES das rotas genéricas (/users) para serem priorizadas.
+#
+# ─────────────────────────────────────────────────────────────
 # SOBRE OS PLUGINS DE SEGURANÇA
 # ─────────────────────────────────────────────────────────────
 #
 #   jwt
-#     Valida o token JWT em todas as requisições.
+#     Valida o token JWT nas rotas protegidas.
 #     Sem token ou com token inválido → 401 Unauthorized.
 #
 #   rate-limiting
@@ -37,27 +50,17 @@
 # SOBRE O CONSUMER E OS VALORES JWT
 # ─────────────────────────────────────────────────────────────
 #
-#   username
-#     Nome identificador do consumer no Kong.
-#     Valor livre — usado apenas para identificação interna.
-#
-#   key: OrchestrationAPI
-#     Deve ser IGUAL ao campo Jwt__Issuer do secret.yaml da UsersAPI.
+#   key: OrchestrationAPI / UserAPI
+#     Deve ser IGUAL ao campo Jwt__Issuer do configmap.yaml da UsersAPI.
 #     O token JWT carrega esse valor no campo 'iss' (issuer).
-#     O Kong usa o 'iss' para localizar o consumer correto
-#     e buscar o secret para validar a assinatura.
 #
 #   secret: af3b1d967c...
 #     Deve ser IGUAL ao campo Jwt__Key do secret.yaml da UsersAPI
 #     (decodificado do Base64).
-#     A UsersAPI usa essa chave para ASSINAR o token.
-#     O Kong usa a MESMA chave para VERIFICAR a assinatura.
 #
-#     É como um cadeado e uma chave:
-#       UsersAPI assina com a chave  → "fecha o cadeado"
-#       Kong verifica com a mesma chave → "abre o cadeado pra checar"
-#
-#     Se as chaves forem diferentes → Kong rejeita com 401.
+#   Dois consumers cadastrados para aceitar tokens de ambos os issuers:
+#     - OrchestrationAPI (issuer antigo — compatibilidade com CatalogAPI)
+#     - UserAPI (issuer atual da UsersAPI)
 #
 # ─────────────────────────────────────────────────────────────
 apiVersion: v1
@@ -77,24 +80,51 @@ data:
         url: http://catalog-api-service.default.svc.cluster.local:80
 
     routes:
+      # ── Rotas públicas (sem JWT) ───────────────────────────
+      # IMPORTANTE: rotas específicas devem vir antes das genéricas
+
+      - name: users-login-route
+        service: users-api
+        paths:
+          - /users/api/Authentication
+        strip_path: true
+        # sem plugin JWT — endpoint público de login
+
+      - name: users-cadastro-route
+        service: users-api
+        paths:
+          - /users/api/Usuarios/Cadastrar
+        strip_path: true
+        # sem plugin JWT — endpoint público de cadastro
+
+      # ── Rotas protegidas (com JWT) ─────────────────────────
+
       - name: users-api-route
         service: users-api
         paths:
           - /users
         strip_path: true
+        plugins:
+          - name: jwt
+            config:
+              claims_to_verify:
+                - exp
+              key_claim_name: iss
 
       - name: catalog-api-route
         service: catalog-api
         paths:
           - /catalog
         strip_path: true
+        plugins:
+          - name: jwt
+            config:
+              claims_to_verify:
+                - exp
+              key_claim_name: iss
 
     plugins:
-      - name: jwt
-        config:
-          claims_to_verify:
-            - exp
-          key_claim_name: iss
+      # ── Plugins globais (aplicados em todas as rotas) ──────
 
       - name: rate-limiting
         config:
@@ -132,4 +162,9 @@ data:
       - username: orchestration-api
         jwt_secrets:
           - key: OrchestrationAPI
+            secret: af3b1d967c45e0df2b84ca91fe3a9d6f1148e2c0e9b7d04a51f396cb8f0a7d32
+
+      - username: users-api
+        jwt_secrets:
+          - key: UserAPI
             secret: af3b1d967c45e0df2b84ca91fe3a9d6f1148e2c0e9b7d04a51f396cb8f0a7d32

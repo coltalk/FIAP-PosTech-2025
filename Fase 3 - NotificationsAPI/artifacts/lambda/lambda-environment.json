@@ -1,0 +1,6 @@
+{
+    "Variables":  {
+                      "DOTNET_SYSTEM_GLOBALIZATION_APPLOCALICU":  "72.1.0.3",
+                      "ConnectionStrings__MS_NotificationsAPI":  "Server=sqlserver,1433;Database=MS_NotificationsAPI;User Id=sa;Password=Fiap@12345;TrustServerCertificate=True"
+                  }
+}

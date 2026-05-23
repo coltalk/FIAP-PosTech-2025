@@ -18,6 +18,7 @@ builder.Services.AddDbContext<UsersApiDbContext>(options => options.UseLazyLoadi
 builder.Services.AddApplicationServices();
 builder.Services.AddDomainServices();
 builder.Services.AddRepositories();
+builder.Services.AddRedisCache(builder.Configuration);
 builder.Services.AddAuthenticationDependencies(builder.Configuration);
 builder.Host.UseSerilog();
 
