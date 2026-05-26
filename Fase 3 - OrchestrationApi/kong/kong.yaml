@@ -1,10 +1,5 @@
 _format_version: "3.0"
 
-# -----------------------------------------------------------------------------
-# Servicos — aponta para os containers do Docker Compose.
-# No Docker Compose os containers se comunicam pelo nome do servico na porta
-# interna 8080 (porta do ASP.NET Core dentro do container).
-# -----------------------------------------------------------------------------
 services:
   - name: users-api
     url: http://users-api:8080
@@ -12,34 +7,50 @@ services:
   - name: catalog-api
     url: http://catalog-api:8080
 
-# -----------------------------------------------------------------------------
-# Rotas — caminhos que o gateway escuta e encaminha para cada servico.
-# strip_path: true remove o prefixo da rota antes de repassar ao servico.
-#   Ex.: GET /users/api/Usuarios -> GET /api/Usuarios (na UsersAPI)
-# -----------------------------------------------------------------------------
+  - name: users-login
+    url: http://users-api:8080/api/Authentication
+
+  - name: users-cadastro
+    url: http://users-api:8080/api/Usuarios/Cadastrar
+
 routes:
+  - name: users-login-route
+    service: users-login
+    paths:
+      - /users/api/Authentication
+    strip_path: true
+
+  - name: users-cadastro-route
+    service: users-cadastro
+    paths:
+      - /users/api/Usuarios/Cadastrar
+    strip_path: true
+
   - name: users-api-route
     service: users-api
     paths:
       - /users
     strip_path: true
+    plugins:
+      - name: jwt
+        config:
+          claims_to_verify:
+            - exp
+          key_claim_name: iss
 
   - name: catalog-api-route
     service: catalog-api
     paths:
       - /catalog
     strip_path: true
+    plugins:
+      - name: jwt
+        config:
+          claims_to_verify:
+            - exp
+          key_claim_name: iss
 
-# -----------------------------------------------------------------------------
-# Plugins globais — aplicados a todas as rotas.
-# -----------------------------------------------------------------------------
 plugins:
-  - name: jwt
-    config:
-      claims_to_verify:
-        - exp
-      key_claim_name: iss
-
   - name: rate-limiting
     config:
       minute: 30
@@ -72,18 +83,13 @@ plugins:
       allowed_payload_size: 10
       size_unit: megabytes
 
-# -----------------------------------------------------------------------------
-# Consumer — identidade autorizada a usar o gateway.
-#
-# key: deve ser IGUAL ao Jwt__Issuer configurado na UsersAPI (docker-compose).
-#   O token JWT gerado pela UsersAPI carrega esse valor no campo 'iss'.
-#   O Kong usa o 'iss' para localizar este consumer e validar a assinatura.
-#
-# secret: deve ser IGUAL ao Jwt__Key configurado na UsersAPI (docker-compose).
-#   A UsersAPI assina o token com esta chave; o Kong verifica com a mesma.
-# -----------------------------------------------------------------------------
 consumers:
-  - username: orchestration-api
+  - username: users-api
     jwt_secrets:
       - key: UserAPI
+        secret: af3b1d967c45e0df2b84ca91fe3a9d6f1148e2c0e9b7d04a51f396cb8f0a7d32
+
+  - username: orchestration-api
+    jwt_secrets:
+      - key: OrchestrationAPI
         secret: af3b1d967c45e0df2b84ca91fe3a9d6f1148e2c0e9b7d04a51f396cb8f0a7d32

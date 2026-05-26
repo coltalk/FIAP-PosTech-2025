@@ -15,14 +15,23 @@
 # ROTAS CONFIGURADAS
 # ─────────────────────────────────────────────────────────────
 #
-#   users-login-route    → /users/api/Authentication  — PÚBLICA (sem JWT)
-#   users-cadastro-route → /users/api/Usuarios/Cadastrar — PÚBLICA (sem JWT)
-#   users-api-route      → /users                     — PROTEGIDA (com JWT)
-#   catalog-api-route    → /catalog                   — PROTEGIDA (com JWT)
+#   users-login-route    → /users/api/Authentication     PÚBLICA (sem JWT)
+#   users-cadastro-route → /users/api/Usuarios/Cadastrar PÚBLICA (sem JWT)
+#   users-api-route      → /users                        PROTEGIDA (com JWT)
+#   catalog-api-route    → /catalog                      PROTEGIDA (com JWT)
 #
-#   IMPORTANTE: A ordem das rotas importa!
-#   Rotas mais específicas (/users/api/Authentication) devem vir
-#   ANTES das rotas genéricas (/users) para serem priorizadas.
+# COMO FUNCIONA O ROTEAMENTO PÚBLICO
+# ─────────────────────────────────────────────────────────────
+#
+#   Rotas públicas usam services dedicados com URL que já inclui
+#   o path do endpoint. Assim o strip_path: true remove apenas o
+#   prefixo da rota, e o service completa o path correto.
+#
+#   Exemplo login:
+#     Entra:   POST /users/api/Authentication/login
+#     Remove:  /users/api/Authentication  (strip_path: true)
+#     Service: http://users-api-service:80/api/Authentication
+#     Resultado: http://users-api-service:80/api/Authentication/login ✅
 #
 # ─────────────────────────────────────────────────────────────
 # SOBRE OS PLUGINS DE SEGURANÇA
@@ -59,8 +68,8 @@
 #     (decodificado do Base64).
 #
 #   Dois consumers cadastrados para aceitar tokens de ambos os issuers:
-#     - OrchestrationAPI (issuer antigo — compatibilidade com CatalogAPI)
-#     - UserAPI (issuer atual da UsersAPI)
+#     - OrchestrationAPI (issuer Kubernetes — configmap.yaml)
+#     - UserAPI (issuer Docker Compose — docker-compose.yml)
 #
 # ─────────────────────────────────────────────────────────────
 apiVersion: v1
@@ -79,25 +88,24 @@ data:
       - name: catalog-api
         url: http://catalog-api-service.default.svc.cluster.local:80
 
-    routes:
-      # ── Rotas públicas (sem JWT) ───────────────────────────
-      # IMPORTANTE: rotas específicas devem vir antes das genéricas
+      - name: users-login
+        url: http://users-api-service.default.svc.cluster.local:80/api/Authentication
 
+      - name: users-cadastro
+        url: http://users-api-service.default.svc.cluster.local:80/api/Usuarios/Cadastrar
+
+    routes:
       - name: users-login-route
-        service: users-api
+        service: users-login
         paths:
           - /users/api/Authentication
         strip_path: true
-        # sem plugin JWT — endpoint público de login
 
       - name: users-cadastro-route
-        service: users-api
+        service: users-cadastro
         paths:
           - /users/api/Usuarios/Cadastrar
         strip_path: true
-        # sem plugin JWT — endpoint público de cadastro
-
-      # ── Rotas protegidas (com JWT) ─────────────────────────
 
       - name: users-api-route
         service: users-api
@@ -124,8 +132,6 @@ data:
               key_claim_name: iss
 
     plugins:
-      # ── Plugins globais (aplicados em todas as rotas) ──────
-
       - name: rate-limiting
         config:
           minute: 30
