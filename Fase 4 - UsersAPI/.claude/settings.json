@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet *)",
+      "Bash(docker compose *)",
+      "Bash(docker exec *)",
+      "Bash(docker build *)",
+      "PowerShell(dotnet *)",
+      "PowerShell(docker *)",
+      "PowerShell(Start-Sleep *)"
+    ]
+  }
+}

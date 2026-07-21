@@ -1,0 +1,176 @@
+# ─── ConfigMap ───────────────────────────────────────────────
+# Configuração declarativa do Kong em modo DB-less.
+# Este arquivo é montado como kong.yaml dentro do Pod do Kong.
+#
+# ─────────────────────────────────────────────────────────────
+# ESTRUTURA DO ARQUIVO
+# ─────────────────────────────────────────────────────────────
+#
+#   services:  backends — endereços internos dos microsserviços
+#   routes:    entradas — caminhos que o gateway escuta
+#   plugins:   proteções — comportamentos aplicados às requisições
+#   consumers: identidades — quem está autorizado a usar o gateway
+#
+# ─────────────────────────────────────────────────────────────
+# ROTAS CONFIGURADAS
+# ─────────────────────────────────────────────────────────────
+#
+#   users-login-route    → /users/api/Authentication     PÚBLICA (sem JWT)
+#   users-cadastro-route → /users/api/Usuarios/Cadastrar PÚBLICA (sem JWT)
+#   users-api-route      → /users                        PROTEGIDA (com JWT)
+#   catalog-api-route    → /catalog                      PROTEGIDA (com JWT)
+#
+# COMO FUNCIONA O ROTEAMENTO PÚBLICO
+# ─────────────────────────────────────────────────────────────
+#
+#   Rotas públicas usam services dedicados com URL que já inclui
+#   o path do endpoint. Assim o strip_path: true remove apenas o
+#   prefixo da rota, e o service completa o path correto.
+#
+#   Exemplo login:
+#     Entra:   POST /users/api/Authentication/login
+#     Remove:  /users/api/Authentication  (strip_path: true)
+#     Service: http://users-api-service:80/api/Authentication
+#     Resultado: http://users-api-service:80/api/Authentication/login ✅
+#
+# ─────────────────────────────────────────────────────────────
+# SOBRE OS PLUGINS DE SEGURANÇA
+# ─────────────────────────────────────────────────────────────
+#
+#   jwt
+#     Valida o token JWT nas rotas protegidas.
+#     Sem token ou com token inválido → 401 Unauthorized.
+#
+#   rate-limiting
+#     Limita o número de requisições por cliente.
+#     Limite: 30 por minuto / 500 por hora.
+#     Quando excedido → 429 Too Many Requests.
+#
+#   cors
+#     Controla quais origens podem acessar a API.
+#     Protege contra requisições de domínios não autorizados.
+#
+#   request-size-limiting
+#     Bloqueia requisições com payload acima de 10MB.
+#     Protege contra ataques de negação de serviço (DoS).
+#     Quando excedido → 413 Payload Too Large.
+#
+# ─────────────────────────────────────────────────────────────
+# SOBRE O CONSUMER E OS VALORES JWT
+# ─────────────────────────────────────────────────────────────
+#
+#   key: OrchestrationAPI / UserAPI
+#     Deve ser IGUAL ao campo Jwt__Issuer do configmap.yaml da UsersAPI.
+#     O token JWT carrega esse valor no campo 'iss' (issuer).
+#
+#   secret: af3b1d967c...
+#     Deve ser IGUAL ao campo Jwt__Key do secret.yaml da UsersAPI
+#     (decodificado do Base64).
+#
+#   Dois consumers cadastrados para aceitar tokens de ambos os issuers:
+#     - OrchestrationAPI (issuer Kubernetes — configmap.yaml)
+#     - UserAPI (issuer Docker Compose — docker-compose.yml)
+#
+# ─────────────────────────────────────────────────────────────
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kong-config
+  namespace: kong
+data:
+  kong.yaml: |
+    _format_version: "3.0"
+
+    services:
+      - name: users-api
+        url: http://users-api-service.default.svc.cluster.local:80
+
+      - name: catalog-api
+        url: http://catalog-api-service.default.svc.cluster.local:80
+
+      - name: users-login
+        url: http://users-api-service.default.svc.cluster.local:80/api/Authentication
+
+      - name: users-cadastro
+        url: http://users-api-service.default.svc.cluster.local:80/api/Usuarios/Cadastrar
+
+    routes:
+      - name: users-login-route
+        service: users-login
+        paths:
+          - /users/api/Authentication
+        strip_path: true
+
+      - name: users-cadastro-route
+        service: users-cadastro
+        paths:
+          - /users/api/Usuarios/Cadastrar
+        strip_path: true
+
+      - name: users-api-route
+        service: users-api
+        paths:
+          - /users
+        strip_path: true
+        plugins:
+          - name: jwt
+            config:
+              claims_to_verify:
+                - exp
+              key_claim_name: iss
+
+      - name: catalog-api-route
+        service: catalog-api
+        paths:
+          - /catalog
+        strip_path: true
+        plugins:
+          - name: jwt
+            config:
+              claims_to_verify:
+                - exp
+              key_claim_name: iss
+
+    plugins:
+      - name: rate-limiting
+        config:
+          minute: 30
+          hour: 500
+          policy: local
+          fault_tolerant: true
+          hide_client_headers: false
+
+      - name: cors
+        config:
+          origins:
+            - "*"
+          methods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+            - OPTIONS
+          headers:
+            - Authorization
+            - Content-Type
+          exposed_headers:
+            - X-RateLimit-Limit-Minute
+            - X-RateLimit-Remaining-Minute
+          credentials: true
+          max_age: 3600
+
+      - name: request-size-limiting
+        config:
+          allowed_payload_size: 10
+          size_unit: megabytes
+
+    consumers:
+      - username: orchestration-api
+        jwt_secrets:
+          - key: OrchestrationAPI
+            secret: af3b1d967c45e0df2b84ca91fe3a9d6f1148e2c0e9b7d04a51f396cb8f0a7d32
+
+      - username: users-api
+        jwt_secrets:
+          - key: UserAPI
+            secret: af3b1d967c45e0df2b84ca91fe3a9d6f1148e2c0e9b7d04a51f396cb8f0a7d32

@@ -1,0 +1,95 @@
+_format_version: "3.0"
+
+services:
+  - name: users-api
+    url: http://users-api:8080
+
+  - name: catalog-api
+    url: http://catalog-api:8080
+
+  - name: users-login
+    url: http://users-api:8080/api/Authentication
+
+  - name: users-cadastro
+    url: http://users-api:8080/api/Usuarios/Cadastrar
+
+routes:
+  - name: users-login-route
+    service: users-login
+    paths:
+      - /users/api/Authentication
+    strip_path: true
+
+  - name: users-cadastro-route
+    service: users-cadastro
+    paths:
+      - /users/api/Usuarios/Cadastrar
+    strip_path: true
+
+  - name: users-api-route
+    service: users-api
+    paths:
+      - /users
+    strip_path: true
+    plugins:
+      - name: jwt
+        config:
+          claims_to_verify:
+            - exp
+          key_claim_name: iss
+
+  - name: catalog-api-route
+    service: catalog-api
+    paths:
+      - /catalog
+    strip_path: true
+    plugins:
+      - name: jwt
+        config:
+          claims_to_verify:
+            - exp
+          key_claim_name: iss
+
+plugins:
+  - name: rate-limiting
+    config:
+      minute: 30
+      hour: 500
+      policy: local
+      fault_tolerant: true
+      hide_client_headers: false
+
+  - name: cors
+    config:
+      origins:
+        - "*"
+      methods:
+        - GET
+        - POST
+        - PUT
+        - DELETE
+        - OPTIONS
+      headers:
+        - Authorization
+        - Content-Type
+      exposed_headers:
+        - X-RateLimit-Limit-Minute
+        - X-RateLimit-Remaining-Minute
+      credentials: true
+      max_age: 3600
+
+  - name: request-size-limiting
+    config:
+      allowed_payload_size: 10
+      size_unit: megabytes
+
+consumers:
+  - username: users-api
+    jwt_secrets:
+      - key: UserAPI
+        secret: af3b1d967c45e0df2b84ca91fe3a9d6f1148e2c0e9b7d04a51f396cb8f0a7d32
+
+  - username: orchestration-api
+    jwt_secrets:
+      - key: OrchestrationAPI
+        secret: af3b1d967c45e0df2b84ca91fe3a9d6f1148e2c0e9b7d04a51f396cb8f0a7d32
