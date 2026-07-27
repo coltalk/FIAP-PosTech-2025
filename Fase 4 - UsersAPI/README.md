@@ -9,8 +9,13 @@ Microsserviço responsável pelo **cadastro, autenticação e gerenciamento de u
 - .NET 9
 - SQL Server (dados relacionais)
 - MongoDB (logs via Serilog)
+- Redis (cache distribuído)
 - RabbitMQ (publicação de eventos)
 - JWT Bearer Authentication
+- Kubernetes (Azure AKS) — orquestração em produção
+- Azure Container Registry (ACR) — registro de imagens
+- Kong API Gateway — exposição externa do serviço
+- GitHub Actions — pipeline de CI/CD
 
 ---
 
@@ -158,11 +163,7 @@ Swagger disponível em: `http://localhost:5001/swagger`
 
 ## ☸️ Rodando com Kubernetes
 
-### Pré-requisitos
-
-- Docker Desktop com **Kubernetes habilitado**
-- `kubectl` disponível no terminal
-- Infraestrutura já aplicada via OrchestrationAPI
+Este serviço roda em Kubernetes de duas formas: **localmente** (Docker Desktop, para desenvolvimento) e em **produção** (Azure AKS, via pipeline de CI/CD). A estrutura dos manifestos é a mesma nos dois casos — o que muda é de onde vem a imagem e como o serviço é exposto.
 
 ### Estrutura dos manifestos
 
@@ -170,44 +171,60 @@ Swagger disponível em: `http://localhost:5001/swagger`
 UsersAPI/
 └── k8s/
     ├── configmap.yaml        ← variáveis não sensíveis (inclui ConnectionStrings__Redis)
-    ├── secret.yaml           ← variáveis sensíveis (Base64)
-    ├── deployment.yaml       ← gerencia os Pods
-    ├── service.yaml          ← expõe o serviço na rede
+    ├── secret.yaml           ← variáveis sensíveis (Base64) — nunca commitar com valores reais
+    ├── deployment.yaml       ← gerencia os Pods (2 réplicas)
+    ├── service.yaml          ← expõe o serviço internamente (ClusterIP)
     ├── redis-deployment.yaml ← cache distribuído (Redis) usado pelo UsersAPI
     └── redis-service.yaml    ← Service interno (ClusterIP) do Redis
 ```
 
-### 1. Aplicar os manifestos
+> 🔒 **Sobre o `secret.yaml`:** o arquivo do repositório deve conter apenas placeholders. As credenciais reais (senha do SQL Server, senha do RabbitMQ, chave JWT, connection string do MongoDB) nunca devem ser commitadas — em produção elas são gerenciadas via GitHub Secrets/Azure Key Vault e injetadas em tempo de execução.
+
+### Opção A — Rodando localmente (Docker Desktop)
+
+**Pré-requisitos:**
+- Docker Desktop com **Kubernetes habilitado**
+- `kubectl` disponível no terminal
+- Infraestrutura já aplicada via OrchestrationAPI
+
+**1. Aplicar os manifestos**
 
 ```bash
 # Na raiz do repositório UsersAPI
 kubectl apply -f k8s/
 ```
 
-### 2. Verificar se está rodando
+**2. Verificar se está rodando**
 
 ```bash
 kubectl get pods
 kubectl get services
 ```
 
-### 3. Acessar o Swagger
+**3. Acessar o Swagger**
+
+Como o `service.yaml` é do tipo `ClusterIP`, use port-forward para acessar localmente:
 
 ```bash
-# Descubra a porta externa atribuída
-kubectl get services
-
-# Acesse no browser (substitua pela porta real)
-http://localhost:30001/swagger
+kubectl port-forward service/users-api-service 5001:80
 ```
 
-> ⚠️ O Docker Desktop pode atribuir uma porta diferente da definida no manifesto. Verifique a porta real com `kubectl get services` na coluna `PORT(S)`.
+Acesse: `http://localhost:5001/swagger`
 
-### Parar o serviço
+**Parar o serviço**
 
 ```bash
 kubectl delete -f k8s/
 ```
+
+### Opção B — Produção (Azure AKS)
+
+Em produção, o serviço roda em um cluster **AKS** e segue este fluxo:
+
+- **Imagem:** publicada no **Azure Container Registry** (`fcgacr.azurecr.io/fcg-users-api`) automaticamente pela pipeline de CI/CD a cada push na `main` — nunca é feito build/push manual.
+- **Exposição externa:** o `users-api-service` é `ClusterIP` (não acessível diretamente de fora do cluster). O acesso externo é feito através do **Kong API Gateway** (`kong-proxy`, exposto como `LoadBalancer`), que roteia as requisições até o serviço.
+- **Atualização:** o deploy é feito via `kubectl set image`, atualizando a imagem do `Deployment` com a nova tag gerada pela pipeline, em **Rolling Update** (sem downtime).
+- **Credenciais do cluster:** obtidas via `az aks get-credentials`, autenticado por OIDC (sem uso de senha/token estático).
 
 ---
 
@@ -318,7 +335,39 @@ Execute o `GET` novamente. O log mostrará `Cache populado` — a API voltou ao 
 
 ---
 
+## 🚀 Pipeline de CI/CD
+
+O ciclo de vida do serviço é totalmente automatizado via **GitHub Actions** (`.github/workflows/ci-cd.yml`), disparado a cada push ou pull request para a branch `main`.
+
+### Etapas do workflow
+
+| Etapa | O que faz |
+|---|---|
+| **1. Build & Test** | Restaura dependências, compila a solução (`dotnet build`) e executa os testes automatizados (`dotnet test`) |
+| **2. Build & Push da imagem** | Autentica na Azure via OIDC, gera a imagem Docker com tag baseada no SHA do commit (`sha-xxxxxxx`) e faz push para o Azure Container Registry |
+| **3. Security Scan (Trivy)** | Escaneia a imagem em busca de vulnerabilidades `CRITICAL`/`HIGH` e publica o resultado no GitHub Security. Não bloqueia o deploy (etapa desejável, não obrigatória) |
+| **4. Deploy (Rolling Update)** | Conecta ao cluster AKS, converte o kubeconfig para autenticação via Azure RBAC (`kubelogin`) e atualiza a imagem do `Deployment` com `kubectl set image`, aguardando a conclusão do rollout |
+
+### Regras de execução
+
+- **Build & Test** roda em qualquer push ou PR para `main`.
+- **Build & Push** e **Deploy** só rodam fora de pull requests (ou seja, após o merge na `main`) — PRs passam apenas pela etapa de build/test como validação.
+- Todas as credenciais (Azure, ACR, cluster) são fornecidas via **variáveis e secrets do GitHub Actions**, nunca hardcoded no workflow.
+
+### Escopo atual
+
+A pipeline cobre o **UsersAPI**. O mesmo padrão é replicado no **CatalogAPI**, conforme exigido pela Fase 4 do Tech Challenge.
+
+---
+
 ## 🎓 Contexto Acadêmico
 
-Desenvolvido para o **Tech Challenge Fase 2 — PosTech FIAP**
-Arquitetura de Software em .NET com Azure.
+Desenvolvido para o **Tech Challenge — PosTech FIAP**, Arquitetura de Software em .NET com Azure.
+
+Este repositório evoluiu ao longo das fases do curso:
+- **Fase 2:** estrutura inicial da API, autenticação JWT e persistência relacional (SQL Server)
+- **Fase 3:** containerização, Kubernetes local e mensageria (RabbitMQ)
+- **Fase 4:** cache distribuído (Redis), deploy gerenciado em Azure AKS e automação de CI/CD com GitHub Actions
+
+
+

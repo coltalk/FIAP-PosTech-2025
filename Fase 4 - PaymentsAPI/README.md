@@ -76,7 +76,7 @@ cd OrchestrationAPI
 docker compose up --build
 ```
 
-> ℹ️ Este serviço não possui Swagger pois não expõe endpoints HTTP. Para monitorar os eventos, acesse o painel do RabbitMQ em `http://localhost:15672` com as credenciais `admin` / `admin`.
+> ℹ️ Este serviço não possui Swagger pois não expõe endpoints HTTP. Para monitorar os eventos, acesse o painel do RabbitMQ em `http://localhost:15672` (credenciais definidas via `RABBITMQ_DEFAULT_USER` / `RABBITMQ_DEFAULT_PASS` no ambiente da OrchestrationAPI — nunca commitar o valor real).
 
 ---
 
@@ -134,5 +134,9 @@ kubectl delete -f k8s/
 
 ## 🎓 Contexto Acadêmico
 
-Desenvolvido para o **Tech Challenge Fase 2 — PosTech FIAP**
-Arquitetura de Software em .NET com Azure.
+Desenvolvido para o **Tech Challenge — PosTech FIAP**, Arquitetura de Software em .NET com Azure.
+
+Este repositório evoluiu ao longo das fases do curso:
+- **Fase 2:** estrutura inicial do serviço orientado a eventos, consumo/publicação via RabbitMQ e persistência no SQL Server
+- **Fase 3:** containerização e execução local via Kubernetes (`k8s/`)
+- **Fase 4:** ajustes de infraestrutura e observabilidade (logs via MongoDB/Serilog)
