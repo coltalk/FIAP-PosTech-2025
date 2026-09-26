@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+**/.vs/
+**/*.user
+**/*.lscache
+k8s/
+docker-compose.yml
+.git/
+tests/

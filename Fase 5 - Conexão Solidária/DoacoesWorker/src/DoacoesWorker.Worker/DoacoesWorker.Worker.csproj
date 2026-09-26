@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-DoacoesWorker.Worker-3b7ea15c-ffc0-409d-9dac-055df942101b</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DoacoesWorker.Data\DoacoesWorker.Data.csproj" />
+    <ProjectReference Include="..\DoacoesWorker.IoC\DoacoesWorker.IoC.csproj" />
+  </ItemGroup>
+</Project>
